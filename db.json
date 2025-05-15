@@ -452,6 +452,22 @@
       "price": 14.99,
       "photo": "https://picsum.photos/216",
       "amount": 1
+    },
+    {
+      "id": "070af201-43cc-409d-88dc-aadf6df21d94",
+      "productId": "1",
+      "title": "Izgara Somon",
+      "price": 45.99,
+      "photo": "https://picsum.photos/200",
+      "amount": 2
+    },
+    {
+      "id": "f1f44fae-ba63-4c0f-a132-2a65acfbb69c",
+      "productId": "3",
+      "title": "Tavuk Kebabı",
+      "price": 17.99,
+      "photo": "https://picsum.photos/203",
+      "amount": 2
     }
   ]
 }
