@@ -1,10 +1,17 @@
-# React + Vite
+## 🐞 About This Bug Report
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I demonstrated a bug that occurs when using the latest version of Tailwind CSS together with a JSON server during development.
 
-Currently, two official plugins are available:
+### ❗ The Problem
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# React-Redux-Thunk-Box
-# tailwind-json-server-bug-demo
+When buttons (e.g., “Add to Cart”) are clicked in the application, the intended dynamic functionality works correctly, **but the page unexpectedly refreshes itself** after the click — even when the button is of type `"button"`.
+
+### 🔍 My Analysis
+
+Tailwind CSS relies on watching files and generating classes dynamically based on content. In previous versions of Tailwind, the `content` field in `tailwind.config.js` explicitly defined which file types to watch (e.g., `.ts`, `.tsx`, `.js`, `.jsx`).
+
+In the latest version, I suspect that if the `content` field is not properly defined, Tailwind tries to watch **all files**, including the `json-server` data files. This results in unexpected behavior, like full page reloads, as Tailwind may react to changes it shouldn't be monitoring.
+
+### ✅ Temporary Solution
+
+Downgrading Tailwind to version `v3.3.5` resolved the issue entirely. This version still requires manual definition of the files to watch, which avoids the conflict with `json-server`.
