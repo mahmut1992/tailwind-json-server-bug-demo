@@ -1,3 +1,9 @@
+## 🧑‍💻 Open Source Contributions
+
+- 💬 Opened my first issue in [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss/issues/18036)  
+  ↳ Issue: **[v3.4.x] Unexpected full page reload with json-server + Vite setup**
+
+
 ## 🐞 About This Bug Report
 
 In this project, I demonstrated a bug that occurs when using the latest version of Tailwind CSS together with a JSON server during development.
